@@ -65,8 +65,25 @@
         
         .area2 {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: flex-end;
+            width: 100%;
+        }
+        
+        .button {
+            background-color: #364f6b;
+            border-radius: 10px;
+            border: none;
+            max-width: 50%;
+            width: 12rem;
+            height: 3rem;
+            color: #f5f5f5;
+            font-size: 1.6em;
+            box-shadow: 1px 0px 20px 3px rgba(28, 80, 194, 0.479);
+        }
+        
+        a {
+            clear: both;
         }
     </style>
 
@@ -78,10 +95,10 @@
             <div class="area">
                 <h2 class="mt-1">Looking for friends?</h2>
                 <hr>
-                <h5>Answer a few questions and we'll find someone for you!</h5>
-                <div class="area2">
+                <h5 class="text-center">Answer a few questions and we'll find someone for you!</h5>
+                <div class="area2 mt-4">
                     <h6 class="mr-2">Click survey to get started</h6>
-                    <a href="/survey"><button type="button" class="btn btn-md btn-primary">Survey</button></a>
+                    <a href="/survey"><button type="button" class="button">Survey</button></a>
                 </div>
             </div>
 
@@ -89,5 +106,8 @@
 
         </div>
 
-
+        <script>
+        </script>
 </body>
+
+</html>
