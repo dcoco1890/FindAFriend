@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Find a Buddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Acme|News+Cycle|Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <style>
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+        
+        .div1 {
+            grid-area: 1 / 1 / 2 / 13;
+            background-color: #83b582;
+            /* font-family: 'Acme', sans-serif; */
+            font-family: 'Righteous', cursive;
+            /* font-family: 'News Cycle', sans-serif; */
+            font-size: 2rem;
+            color: #f5f5f5;
+        }
+        
+        .div2 {
+            grid-area: 3 / 2 / 10 / 12;
+            background-color: rgba(255, 150, 5, 0.25);
+        }
+        
+        .div2>form {
+            font-family: 'Acme', sans-serif;
+        }
+    </style>
+
+    <div class="parent">
+        <div class="div1">
+            <h1 class="ml-1 my-1">Friend Finder</h1>
+        </div>
+        <div class="div2">
+            <form action="/api/friends" method="POST">
+                <p>How many cats do you own?</p>
+                <label><input type="radio" name="q1" value="0">0</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="4">4+</label>&nbsp;&nbsp;
+
+                <p>How many times have you ridden a horse?</p>
+                <label><input type="radio" name="q2" value="0">0</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="4">4+</label>&nbsp;&nbsp;
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
