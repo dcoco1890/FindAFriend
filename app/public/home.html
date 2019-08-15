@@ -47,7 +47,7 @@
         }
         
         body {
-            background: #f5f5f5;
+            background: #E0E0E0;
         }
         
         .area>* {
@@ -86,6 +86,19 @@
             transform: translateY(-5%);
             box-shadow: 1px 2px 8px 3px rgb(3, 3, 3);
             color: seashell;
+        }
+        
+        @media screen and (max-width: 640px) {
+            .div2 {
+                grid-area: 3 / 1 / 8 / 13;
+                box-shadow: 1px 0px 20px 3px rgba(3, 3, 3, 0.812);
+                background: #83b582;
+                color: #f5f5f5;
+            }
+            .div3 {
+                grid-area: 8 / 1 / 8 / 9;
+                margin: 0 auto;
+            }
         }
     </style>
 
