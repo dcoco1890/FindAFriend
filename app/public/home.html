@@ -26,7 +26,7 @@
         
         .div1 {
             grid-area: 1 / 1 / 2 / 13;
-            background-color: #364f6b;
+            background-color: #83b582;
             /* font-family: 'Acme', sans-serif; */
             font-family: 'Righteous', cursive;
             /* font-family: 'News Cycle', sans-serif; */
@@ -35,9 +35,15 @@
         }
         
         .div2 {
-            grid-area: 3 / 2 / 8 / 12;
-            box-shadow: 1px 0px 20px 3px rgba(3, 3, 3, 0.534);
-            background: #78c6ca;
+            grid-area: 3 / 3 / 8 / 11;
+            box-shadow: 1px 0px 20px 3px rgba(3, 3, 3, 0.812);
+            background: #83b582;
+            color: #f5f5f5;
+        }
+        
+        .div3 {
+            grid-area: 8 / 3 / 8 / 9;
+            font-size: .8em;
         }
         
         body {
@@ -45,7 +51,7 @@
         }
         
         .area>* {
-            font-family: 'Acme', sans-serif;
+            font-family: 'Righteous', cursive;
         }
         
         .area {
@@ -55,35 +61,30 @@
             flex-direction: column;
             align-items: center;
             color: rgba(3, 3, 3, 0.812);
-            justify-content: center;
+            justify-content: space-around;
             padding: 10px;
         }
         
-        hr {
-            width: 85%;
-        }
-        
-        .area2 {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: flex-end;
-            width: 100%;
+        .area>*:nth-child(2) {
+            font-family: 'News Cycle', sans-serif;
         }
         
         .button {
             background-color: #364f6b;
             border-radius: 10px;
             border: none;
-            max-width: 50%;
-            width: 12rem;
-            height: 3rem;
+            /* max-width: 50%; */
+            /* width: 12rem;
+            height: 3rem; */
             color: #f5f5f5;
             font-size: 1.6em;
             box-shadow: 1px 0px 20px 3px rgba(28, 80, 194, 0.479);
         }
         
-        a {
-            clear: both;
+        button:hover {
+            transform: translateY(-5%);
+            box-shadow: 1px 2px 8px 3px rgb(3, 3, 3);
+            color: seashell;
         }
     </style>
 
@@ -93,17 +94,21 @@
         </div>
         <div class="div2 rounded-lg">
             <div class="area">
-                <h2 class="mt-1">Looking for friends?</h2>
-                <hr>
-                <h5 class="text-center">Answer a few questions and we'll find someone for you!</h5>
-                <div class="area2 mt-4">
-                    <h6 class="mr-2">Click survey to get started</h6>
-                    <a href="/survey"><button type="button" class="button">Survey</button></a>
-                </div>
+
+
+                <h4 class="p-1 mb-0 text-center" style="text-shadow: 0 1px 2px rgba(0,0,0,0.20); color: #f5f5f5">Our matchmakers have perfected the science of matchmaking</h4>
+
+
+                <h6>Take our survey and stop being lonely!</h6>
+                <a href="/survey" class="text-center"><button type="button" class="button">Survey</button></a>
+
             </div>
 
 
 
+        </div>
+        <div class="div3 mt-1">
+            <a href="/api/friends">API Friend List</a>|&nbsp;<a href="#">Github Repo</a>
         </div>
 
         <script>
