@@ -36,17 +36,33 @@
         
         .div2 {
             grid-area: 3 / 2 / 10 / 12;
-            background-color: rgba(255, 150, 5, 0.25);
         }
         
         .div2>form {
             font-family: 'Acme', sans-serif;
+            display: flex;
+        }
+        
+        @media screen and (max-width: 640px) {
+            .div2 {
+                grid-area: 3 / 1 / 8 / 13;
+                box-shadow: 1px 0px 20px 3px rgba(3, 3, 3, 0.812);
+                background: #43a047;
+                display: flex;
+                /* color: ; */
+            }
+            .div3 {
+                grid-area: 8 / 1 / 8 / 9;
+                margin: 0 auto;
+            }
         }
     </style>
 
     <div class="parent">
         <div class="div1">
-            <h1 class="ml-1 my-1">Friend Finder</h1>
+            <a href="/" style="text-decoration: none; color: #f5f5f5">
+                <h1 class="ml-1 my-1">Friend Finder</h1>
+            </a>
         </div>
         <div class="div2">
             <form action="/api/friends" method="POST">
@@ -63,6 +79,15 @@
                 <label><input type="radio" name="q2" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q2" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q2" value="4">4+</label>&nbsp;&nbsp;
+
+                <p>How likely are you to spontaneously combust?</p>
+                <label><input type="radio" name="q1" value="0">0</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="4">4+</label>&nbsp;&nbsp;
+
+                <input type="submit" value="Submit">
             </form>
         </div>
     </div>
