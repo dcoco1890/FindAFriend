@@ -19,7 +19,7 @@
         .parent {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4fr 1fr;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
         }
@@ -42,16 +42,19 @@
         .div2 {
             grid-area: 3 / 2 / 15 / 12;
             background-color: rgba(202, 161, 163, 0.8);
+            border-radius: 8px;
         }
         
         .div2>form {
             font-family: 'News Cycle', sans-serif;
             min-width: 0;
+            height: 100%;
         }
         
         label,
         p {
             margin: 0 auto;
+            font-weight: 700;
         }
         
         p {
@@ -66,6 +69,7 @@
         @media screen and (max-width: 640px) {
             .div2 {
                 grid-area: 3 / 1 / 15 / 13;
+                border-radius: 0px;
             }
             h3 {
                 font-size: 1.2em;
@@ -98,56 +102,73 @@
 
                 </div>
 
-                <p><span class="q pl-1">Question 1: &nbsp;&nbsp;</span>How many times have you ridden a horse?</p>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="0" required>0</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q2" value="1">1</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 1: &nbsp;&nbsp;</span>How many times have you ridden a horse?</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="1" required>1</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q2" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q2" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q2" value="4">4+</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="5">5+</label>&nbsp;&nbsp;
 
-                <p><span class="q pl-1">Question 2: &nbsp;&nbsp;</span>How likely are you to spontaneously combust?</p>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="0" required>0</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q1" value="1">1</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 2: &nbsp;&nbsp;</span>How likely are you to spontaneously combust?</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="1" required>1 (not likely)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q1" value="4">4+</label>&nbsp;&nbsp;
-                <p>How likely are you to spontaneously combust?</p>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="0" required>0</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q3" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="5">5 (more likely)</label>&nbsp;&nbsp;
+
+                <p class="pl-3"><span class="q">Question 3: &nbsp;&nbsp;</span>Which of these numbers do you like better?</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="1" required>1</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q3" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q3" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q3" value="4">4+</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q3" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q3" value="5">5</label>&nbsp;&nbsp;
 
-                <p>How likely are you to spontaneously combust?</p>
-                <label><input type="radio" name="q4" value="0" required>0</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q4" value="1">1</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 4: &nbsp;&nbsp;</span>The highest I can count is...</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q4" value="1" required>1</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q4" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q4" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q4" value="4">4+</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q4" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q4" value="5">5+</label>&nbsp;&nbsp;
 
-                <p>How likely are you to spontaneously combust?</p>
-                <label><input type="radio" name="q5" value="0">0</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q5" value="1">1</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 5: &nbsp;&nbsp;</span>The highest I can count is...</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="1">1</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q5" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q5" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q5" value="4">4+</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q5" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q5" value="5">5+</label>&nbsp;&nbsp;
 
-                <p>How likely are you to spontaneously combust?</p>
-                <label><input type="radio" name="q6" value="0">0</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q6" value="1">1</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 6: &nbsp;&nbsp;</span>People have said I'm attractive</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q6" value="1">1 (not even once)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q6" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q6" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q6" value="4">4+</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q6" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q6" value="5">5 (often)</label>&nbsp;&nbsp;
 
-                <p>How likely are you to spontaneously combust?</p>
-                <label><input type="radio" name="q7" value="0">0</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q7" value="1">1</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 7: &nbsp;&nbsp;</span>I get along better with the opposite sex / gender</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q7" value="1">1 (not true)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q7" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q7" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q7" value="4">4+</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q7" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q7" value="5">5 (very true)</label>&nbsp;&nbsp;
+
+                <p class="pl-3"><span class="q">Question 8: &nbsp;&nbsp;</span>I shower often / daily</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q8" value="1">1 (not true)</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q8" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q8" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q8" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q8" value="5">5 (very true)</label>&nbsp;&nbsp;
+
+                <p class="pl-3"><span class="q">Question 9: &nbsp;&nbsp;</span>I would like to be a vampire</p><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q9" value="1">1 (not true)</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q9" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q9" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q9" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q9" value="5">5 (very true)</label>&nbsp;&nbsp;
+
+                <p class="pl-3"><span class="q">Question 10: &nbsp;&nbsp;</span>I want to make friends</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q10" value="1">1 (not true)</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q10" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q10" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q10" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q10" value="5">5 (very true)</label>&nbsp;&nbsp;
 
 
-                <button type="submit" class="btn-block" id="submit" style="width: 80%; margin: 0 auto">Find my friend!</button>
+                <button type="submit" class="btn-block mt-3 mb-1" id="submit" style="width: 80%; margin: 0 auto; border-radius: 4px; background-color: ">Find my friend!</button>
             </form>
         </div>
     </div>
@@ -156,6 +177,8 @@
         $(document).ready(function() {
 
             $("input").prop('required', true);
+
+
         });
         // $("#submit").on("click", function(event) {
         //     event.preventDefault();
