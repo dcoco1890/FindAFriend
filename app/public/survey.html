@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Find a Buddy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Acme|News+Cycle|Righteous&display=swap" rel="stylesheet">
@@ -84,17 +84,17 @@
             </a>
         </div>
         <div class="div2">
-            <form action="/api/friends" method="POST">
+            <form>
 
 
                 <div class="form-row px-2 m-0">
                     <div class="col-md-6 mb-3 pt-1">
                         <h3>Name: <span class="text-muted">(Required)</span></h3>
 
-                        <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+                        <input type="text" class="form-control" maxlength="20" id="name" placeholder="Full Name" required>
 
                     </div>
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 mb-3 pt-1">
                         <h3>Picture: <span class="text-muted">(Required)</span></h3>
                         <input type="text" class="form-control" id="img" placeholder="link to image" required>
 
@@ -104,17 +104,17 @@
 
                 <p class="pl-3"><span class="q">Question 1: &nbsp;&nbsp;</span>How many times have you ridden a horse?</p>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="1" required>1</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q2" value="2">2</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q2" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q2" value="4">4</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q2" value="5">5+</label>&nbsp;&nbsp;
-
-                <p class="pl-3"><span class="q">Question 2: &nbsp;&nbsp;</span>How likely are you to spontaneously combust?</p>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="1" required>1 (not likely)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="4">4</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q1" value="5">5 (more likely)</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q1" value="5">5+</label>&nbsp;&nbsp;
+
+                <p class="pl-3"><span class="q">Question 2: &nbsp;&nbsp;</span>How likely are you to spontaneously combust?</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="1" required>1 (not likely)</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="4">4</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q2" value="5">5 (more likely)</label>&nbsp;&nbsp;
 
                 <p class="pl-3"><span class="q">Question 3: &nbsp;&nbsp;</span>Which of these numbers do you like better?</p>
                 <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="1" required>1</label>&nbsp;&nbsp;
@@ -131,44 +131,44 @@
                 <label><input type="radio" name="q4" value="5">5+</label>&nbsp;&nbsp;
 
                 <p class="pl-3"><span class="q">Question 5: &nbsp;&nbsp;</span>The highest I can count is...</p>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="1">1</label>&nbsp;&nbsp;
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q5" value="1" required>1</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q5" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q5" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q5" value="4">4</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q5" value="5">5+</label>&nbsp;&nbsp;
 
-                <p class="pl-3"><span class="q">Question 6: &nbsp;&nbsp;</span>People have said I'm attractive</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q6" value="1">1 (not even once)</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 6: &nbsp;&nbsp;</span>People have said I'm attractive</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q6" value="1" required>1 (not even once)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q6" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q6" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q6" value="4">4</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q6" value="5">5 (often)</label>&nbsp;&nbsp;
 
-                <p class="pl-3"><span class="q">Question 7: &nbsp;&nbsp;</span>I get along better with the opposite sex / gender</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q7" value="1">1 (not true)</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 7: &nbsp;&nbsp;</span>I get along better with the opposite sex / gender</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q7" value="1" required>1 (not true)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q7" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q7" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q7" value="4">4</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q7" value="5">5 (very true)</label>&nbsp;&nbsp;
 
-                <p class="pl-3"><span class="q">Question 8: &nbsp;&nbsp;</span>I shower often / daily</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q8" value="1">1 (not true)</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 8: &nbsp;&nbsp;</span>I shower often / daily</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q8" value="1" required>1 (not true)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q8" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q8" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q8" value="4">4</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q8" value="5">5 (very true)</label>&nbsp;&nbsp;
 
-                <p class="pl-3"><span class="q">Question 9: &nbsp;&nbsp;</span>I would like to be a vampire</p><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q9" value="1">1 (not true)</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 9: &nbsp;&nbsp;</span>I would like to be a vampire</p><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q9" value="1" required>1 (not true)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q9" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q9" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q9" value="4">4</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q9" value="5">5 (very true)</label>&nbsp;&nbsp;
 
-                <p class="pl-3"><span class="q">Question 10: &nbsp;&nbsp;</span>I want to make friends</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q10" value="1">1 (not true)</label>&nbsp;&nbsp;
+                <p class="pl-3"><span class="q">Question 10: &nbsp;&nbsp;</span>I want to make friends</p> <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q10" value="1" required>1 (not true)</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q10" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q10" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q10" value="4">4</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q10" value="5">5 (very true)</label>&nbsp;&nbsp;
 
 
-                <button type="submit" class="btn-block mt-3 mb-1" id="submit" style="width: 80%; margin: 0 auto; border-radius: 4px; background-color: ">Find my friend!</button>
+                <button type="submit" class="btn-block mt-3 mb-1" id="submit" style="width: 80%; margin: 0 auto; border-radius: 4px; background-color: rgb(143,188,186); border-color: #8fbca4">Find my friend!</button>
             </form>
         </div>
     </div>
@@ -176,17 +176,26 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            $("input").prop('required', true);
+
+            // $("input").prop('required', true);
+
+            $("#submit").on("click", function(event) {
+
+                event.preventDefault();
+                var friendData = {
+                    name: $("#name").val().trim(),
+                    photo: $("#img").val().trim(),
+                    scores: [$("input[name=q1]:checked").val(), $("input[name='q2']:checked").val(), $("input[name='q3']:checked").val(), $("input[name='q4']:checked").val(), $("input[name='q5']:checked").val(), $("input[name='q6']:checked").val(), $("input[name='q7']:checked").val(), $("input[name='q8']:checked").val(), $("input[name='q9']:checked").val(), $("input[name='q10']:checked").val()]
+                };
+
+                $.post("/api/friends", friendData, function(data) {
+                    // $(".div1").text()
+
+                });
 
 
+            });
         });
-        // $("#submit").on("click", function(event) {
-        //     event.preventDefault();
-
-        //     // var newData = {
-
-        //     // }
-        // })
     </script>
 </body>
 
