@@ -24,9 +24,14 @@
             grid-row-gap: 0px;
         }
         
+        body {
+            background-image: url("img2.png");
+            /* background-repeat: repeat-y; */
+        }
+        
         .div1 {
             grid-area: 1 / 1 / 2 / 13;
-            background-color: #83b582;
+            background-color: rgba(202, 161, 163, 0.8);
             /* font-family: 'Acme', sans-serif; */
             font-family: 'Righteous', cursive;
             /* font-family: 'News Cycle', sans-serif; */
@@ -35,25 +40,35 @@
         }
         
         .div2 {
-            grid-area: 3 / 2 / 10 / 12;
+            grid-area: 3 / 2 / 15 / 12;
+            background-color: rgba(202, 161, 163, 0.8);
         }
         
         .div2>form {
+            font-family: 'News Cycle', sans-serif;
+            min-width: 0;
+        }
+        
+        label,
+        p {
+            margin: 0 auto;
+        }
+        
+        p {
+            font-size: 1.1em;
+        }
+        
+        .q {
             font-family: 'Acme', sans-serif;
-            display: flex;
+            font-size: 1.6em;
         }
         
         @media screen and (max-width: 640px) {
             .div2 {
-                grid-area: 3 / 1 / 8 / 13;
-                box-shadow: 1px 0px 20px 3px rgba(3, 3, 3, 0.812);
-                background: #43a047;
-                display: flex;
-                /* color: ; */
+                grid-area: 3 / 1 / 15 / 13;
             }
-            .div3 {
-                grid-area: 8 / 1 / 8 / 9;
-                margin: 0 auto;
+            h3 {
+                font-size: 1.2em;
             }
         }
     </style>
@@ -66,33 +81,90 @@
         </div>
         <div class="div2">
             <form action="/api/friends" method="POST">
-                <p>How many cats do you own?</p>
-                <label><input type="radio" name="q1" value="0">0</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q1" value="1">1</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q1" value="2">2</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q1" value="3">3</label>&nbsp;&nbsp;
-                <label><input type="radio" name="q1" value="4">4+</label>&nbsp;&nbsp;
 
-                <p>How many times have you ridden a horse?</p>
-                <label><input type="radio" name="q2" value="0">0</label>&nbsp;&nbsp;
+
+                <div class="form-row px-2 m-0">
+                    <div class="col-md-6 mb-3 pt-1">
+                        <h3>Name: <span class="text-muted">(Required)</span></h3>
+
+                        <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <h3>Picture: <span class="text-muted">(Required)</span></h3>
+                        <input type="text" class="form-control" id="img" placeholder="link to image" required>
+
+                    </div>
+
+                </div>
+
+                <p><span class="q pl-1">Question 1: &nbsp;&nbsp;</span>How many times have you ridden a horse?</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q2" value="0" required>0</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q2" value="1">1</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q2" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q2" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q2" value="4">4+</label>&nbsp;&nbsp;
 
-                <p>How likely are you to spontaneously combust?</p>
-                <label><input type="radio" name="q1" value="0">0</label>&nbsp;&nbsp;
+                <p><span class="q pl-1">Question 2: &nbsp;&nbsp;</span>How likely are you to spontaneously combust?</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q1" value="0" required>0</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="1">1</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="2">2</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="3">3</label>&nbsp;&nbsp;
                 <label><input type="radio" name="q1" value="4">4+</label>&nbsp;&nbsp;
+                <p>How likely are you to spontaneously combust?</p>
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="q3" value="0" required>0</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q3" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q3" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q3" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q3" value="4">4+</label>&nbsp;&nbsp;
 
-                <input type="submit" value="Submit">
+                <p>How likely are you to spontaneously combust?</p>
+                <label><input type="radio" name="q4" value="0" required>0</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q4" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q4" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q4" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q4" value="4">4+</label>&nbsp;&nbsp;
+
+                <p>How likely are you to spontaneously combust?</p>
+                <label><input type="radio" name="q5" value="0">0</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q5" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q5" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q5" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q5" value="4">4+</label>&nbsp;&nbsp;
+
+                <p>How likely are you to spontaneously combust?</p>
+                <label><input type="radio" name="q6" value="0">0</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q6" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q6" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q6" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q6" value="4">4+</label>&nbsp;&nbsp;
+
+                <p>How likely are you to spontaneously combust?</p>
+                <label><input type="radio" name="q7" value="0">0</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q7" value="1">1</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q7" value="2">2</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q7" value="3">3</label>&nbsp;&nbsp;
+                <label><input type="radio" name="q7" value="4">4+</label>&nbsp;&nbsp;
+
+
+                <button type="submit" class="btn-block" id="submit" style="width: 80%; margin: 0 auto">Find my friend!</button>
             </form>
         </div>
     </div>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
 
+            $("input").prop('required', true);
+        });
+        // $("#submit").on("click", function(event) {
+        //     event.preventDefault();
+
+        //     // var newData = {
+
+        //     // }
+        // })
+    </script>
 </body>
 
 </html>

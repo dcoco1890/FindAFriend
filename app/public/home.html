@@ -26,7 +26,7 @@
         
         .div1 {
             grid-area: 1 / 1 / 2 / 13;
-            background-color: #83b582;
+            background-color: rgba(202, 161, 163, 0.8);
             /* font-family: 'Acme', sans-serif; */
             font-family: 'Righteous', cursive;
             /* font-family: 'News Cycle', sans-serif; */
@@ -36,18 +36,23 @@
         
         .div2 {
             grid-area: 3 / 3 / 8 / 11;
-            box-shadow: 1px 0px 20px 3px rgba(3, 3, 3, 0.812);
-            background: #83b582;
+            box-shadow: 1px 0px 8px 1px rgba(161, 202, 200, 0.812);
+            background-color: rgba(202, 161, 163, 0.8);
             color: #f5f5f5;
         }
         
         .div3 {
-            grid-area: 8 / 3 / 8 / 9;
+            grid-area: 8 / 3 / 8 / 7;
             font-size: .8em;
         }
         
+        .div3>a {
+            font-size: 1.6em;
+            text-shadow: 0 1px 2px rgba(255, 255, 255 0.8);
+        }
+        
         body {
-            background-image: url("img.png");
+            background-image: url("img2.png");
             /* background-repeat: repeat-y; */
         }
         
@@ -65,10 +70,12 @@
             justify-content: space-around;
             padding: 10px;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+            text-align: center;
         }
         
         .area>*:nth-child(2) {
             font-family: 'News Cycle', sans-serif;
+            text-align: center;
         }
         
         .button {
@@ -91,14 +98,20 @@
         
         @media screen and (max-width: 640px) {
             .div2 {
-                grid-area: 3 / 1 / 8 / 13;
+                grid-area: 3 / 1 / 9 / 13;
                 box-shadow: 1px 0px 20px 3px rgba(3, 3, 3, 0.812);
-                background: #83b582;
                 color: #f5f5f5;
             }
             .div3 {
-                grid-area: 8 / 1 / 8 / 9;
-                margin: 0 auto;
+                grid-area: 9 / 1 / 9 / 9;
+                padding-left: 8px;
+            }
+            .area>*:nth-child(2) {
+                text-align: left;
+            }
+            .area>*:first-child {
+                text-align: left;
+                font-size: 2em;
             }
         }
     </style>
@@ -113,9 +126,9 @@
             <div class="area">
 
 
-                <h4 class="p-1 mb-0 text-center" style="text-shadow: 0 1px 2px rgba(0,0,0,0.20); color: #f5f5f5; width: 85%;">Our matchmakers have perfected the science of matchmaking</h4>
+                <h4 class="px-1 mb-0" style="text-shadow: 0 1px 2px rgba(0,0,0,0.20); color: #ffffff; width: 85%;">Our matchmakers have perfected the science of matchmaking</h4>
 
-
+                <h5 class="px-3 mb-0">Do you struggle to make friends? Do you find it hard to relate to the people around you? It doesn't have to be that way!</h5>
                 <h6>Take our survey and stop being lonely!</h6>
                 <a href="/survey" class="text-center"><button type="button" class="button">Survey</button></a>
 
@@ -125,7 +138,7 @@
 
         </div>
         <div class="div3 mt-1">
-            <a href="/api/friends">API Friend List</a>|&nbsp;<a href="/git">Github Repo</a>
+            <a href="/api/friends">API Friend List</a>&nbsp;|&nbsp;<a href="/git">Github Repo</a>
         </div>
 
         <script>
