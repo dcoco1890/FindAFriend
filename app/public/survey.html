@@ -76,7 +76,26 @@
             }
         }
     </style>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="title">Your new Best Friend!</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="text-center" id="match-name"></h4>
+                    <img class="match-img" style="width:100%;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div class="parent">
         <div class="div1">
             <a href="/" style="text-decoration: none; color: #f5f5f5">
@@ -194,11 +213,16 @@
                 });
 
                 if (friendData.name === "" || friendData.photo === "" || count < 10) {
-                    //modal fill out all fields
+                    $('#title').text("Please fill out all the fields");
+                    $("#myModal").modal();
                 } else {
-
+                    $('#title').text("Your new Best Friend!");
                     $.post(`/api/friends`, friendData, function(data) {
                         console.log(data);
+
+                        $("#match-name").text(data.name);
+                        $(".match-img").attr("src", data.photo);
+                        $("#myModal").modal();
 
                     });
                 }
